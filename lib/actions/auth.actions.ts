@@ -1,5 +1,7 @@
 "use server";
 
-export async function loginAction(params:type) {
-    
+export async function loginAction(username: string, pin: string) {
+    try {
+
+    } chat
 }
