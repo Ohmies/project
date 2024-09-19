@@ -9,6 +9,8 @@ export async function loginAction(username: string, pin: string) {
     if (!validData.success) {
       return { success: false, error: "Invalid data." };
     }
+
+    
     } catch (error) {
         console.error("Error updating cash details:", error);
         return false; 
