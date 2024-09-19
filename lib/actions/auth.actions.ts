@@ -10,6 +10,12 @@ export async function loginAction(username: string, pin: string) {
       return { success: false, error: "Invalid data." };
     }
 
+    const data = "MemberName-1"
+
+    return {
+        success: true,
+        data: data
+    }
     
     } catch (error) {
         console.error("Error updating cash details:", error);
