@@ -165,7 +165,8 @@ function Loginpage() {
               <CardFooter className="flex flex-col space-y-4">
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-900 to-blue-500 text-white"
+                  className="w-full" 
+                  style={{ background: 'linear-gradient(to right, #000DFF, #000899)', color: 'white' }}
                   disabled={isPending}
                 >
                   {isPending ? "Loading..." : "Login"}
@@ -177,6 +178,7 @@ function Loginpage() {
                     color: "white",
                   }}
                 >
+                   <img src="https://th.bing.com/th/id/R.0fa3fe04edf6c0202970f2088edea9e7?rik=joOK76LOMJlBPw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fgoogle-logo-png-open-2000.png&ehk=0PJJlqaIxYmJ9eOIp9mYVPA4KwkGo5Zob552JPltDMw%3d&risl=&pid=ImgRaw&r=0" alt="Login With Google" className="w-5 h-5" />
                   <span>Continue with Google</span>
                 </Button>
                 <p className="text-center text-sm">
