@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs";
 import { eq } from "drizzle-orm";
 import { users } from "@/db/schema";
 import { LoginFormSchema } from "../validations/auth.validations";
+import Link from "next/link";
 
 export async function loginAction(username: string, pin: string) {
   // Validate input data
