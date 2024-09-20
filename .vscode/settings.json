@@ -5,9 +5,9 @@
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "db",
-            "database": "db",
-            "username": "user",
+            "name": "ohmiesdb",
+            "database": "ohmiesdb",
+            "username": "ohmies",
             "password": "Pass1234"
         }
     ]
