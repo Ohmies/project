@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { FaComment, FaBook, FaTasks, FaCog, FaSignOutAlt, FaHome,FaUserFriends } from 'react-icons/fa';
+import { FaComment, FaBook, FaTasks, FaCog, FaSignOutAlt, FaHome } from 'react-icons/fa';
 
 import { RiShining2Fill } from 'react-icons/ri';
 import { Button } from '@/components/ui/button';
@@ -11,10 +11,13 @@ const SideNav = () => {
     <div className="flex flex-col w-64 h-full bg-white fixed">
       {/* Logo Section */}
       <div className="flex items-center justify-center p-4 border-b border-gray-800">
-      <Link href="/" >
-          <Button className="ml-3 text-2xl font-bold hover:bg-blue-500"><RiShining2Fill className='mr-2'/>COURSUE</Button>
-      </Link>
-        </div>
+        <Link href="/" >
+          <Button className="ml-3 text-2xl font-bold hover:brightness-200 transition-all duration-300"
+            style={{ background: 'linear-gradient(to right, #000DFF, #000899)', color: 'white' }}>
+            <RiShining2Fill className='mr-2' />COURSUE
+          </Button>
+        </Link>
+      </div>
 
       {/* Navigation Section */}
       <div className="flex-grow">
@@ -45,13 +48,13 @@ const SideNav = () => {
             </Link>
           </li>
           {/* New Friends Section */}
-    <li>
-      <h1 className='text-1xl p-2'>FRIENDS</h1>
-    </li>
-  </ul>
-</div>
+          <li>
+            <h1 className='text-1xl p-2'>FRIENDS</h1>
+          </li>
+        </ul>
+      </div>
       {/* Settings and Logout Section */}
-      <div className="p-4 border-t border-gray-800">  
+      <div className="p-4 border-t border-gray-800">
         <ul>
           <li>
             <Link href="/settings" className="flex items-center p-2 hover:bg-blue-100 rounded">
