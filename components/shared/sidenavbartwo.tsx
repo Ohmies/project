@@ -21,7 +21,7 @@ const SideNav2 = () => {
           </div>
           {/*Under profie Text*/}
           <div className='flex flex-col justify-center items-center mt-4'>
-            <h1 className='text-center'>Hello Perapat</h1>
+            <h1 className='text-center text-xl'>Hello Perapat</h1>
             <p className='mt-2 text-center text-gray-500'>Continue your Journey And Achieve Your Taget</p>
             <div className='flex flex-row space-x-4 mt-4'>
               <VscBell className="text-3xl" />

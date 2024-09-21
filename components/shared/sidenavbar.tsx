@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { FaComment, FaBook, FaTasks, FaCog, FaSignOutAlt, FaHome } from 'react-icons/fa';
+import { FaComment, FaBook, FaTasks, FaCog, FaSignOutAlt, FaHome,FaUserFriends } from 'react-icons/fa';
 
 import { RiShining2Fill } from 'react-icons/ri';
 import { Button } from '@/components/ui/button';
@@ -44,8 +44,12 @@ const SideNav = () => {
               Assignments
             </Link>
           </li>
-        </ul>
-      </div>
+          {/* New Friends Section */}
+    <li>
+      <h1 className='text-1xl p-2'>FRIENDS</h1>
+    </li>
+  </ul>
+</div>
       {/* Settings and Logout Section */}
       <div className="p-4 border-t border-gray-800">  
         <ul>
