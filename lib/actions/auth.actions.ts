@@ -32,31 +32,8 @@ export async function loginAction(username: string, pin: string) {
         return { success: false, error: "Invalid username or pin." }; // Incorrect password
       }
     }
-
-    // User does not exist, create new user
-    const hashedPin = await bcrypt.hash(pin, 10); // Hash the provided pin
-
-    const newUser = {
-      username,
-      pin: hashedPin,
-      isManager: false, // or any default value required
-      // Add default values for other required columns here
-    };
-
-    const insertResult = await db
-      .insert(users)
-      .values(newUser)
-      .returning()
-      .execute();
-
-    if (insertResult.length > 0) {
-      return {
-        success: true,
-        user: insertResult[0], // Return newly created user
-      };
-    }
-
-    return { success: false, error: "Failed to create user." }; // Error creating user
+    
+    return { success: false, error: "User not found." }; // User not found
   } catch (error) {
     console.error("Error during login action:", error);
     return { success: false, error: "An error occurred during login." };
