@@ -11,7 +11,7 @@ const SideNav = () => {
     <div className="flex flex-col w-64 h-full bg-white fixed">
       {/* Logo Section */}
       <div className="flex items-center justify-center p-4 border-b border-gray-800">
-        <Link href="/" >
+        <Link href="#" >
           <Button className="ml-3 text-2xl font-bold hover:brightness-200 transition-all duration-300"
             style={{ background: 'linear-gradient(to right, #000DFF, #000899)', color: 'white' }}>
             <RiShining2Fill className='mr-2' />COURSUE

@@ -14,7 +14,7 @@ export async function loginAction(username: string, pin: string) {
   }
 
   try {
-
+    console.log(username)
     // Find user by username
     const user = await db
       .select()
@@ -22,12 +22,12 @@ export async function loginAction(username: string, pin: string) {
       .where(eq(users.username, username))
       .limit(1)
       .execute();
-
+      console.log(user);
     if (user.length > 0) {
       // User exists, check password
       const passwordsMatch = await bcrypt.compare(pin, user[0].pin);
       if (passwordsMatch) {
-        return { success: true, user: user[0] }; // Return user data if passwords match
+        return { success: true, user: user[0] }; // Return user data if passwords matchusernameusernameusername
       } else {
         return { success: false, error: "Invalid username or pin." }; // Incorrect password
       }
